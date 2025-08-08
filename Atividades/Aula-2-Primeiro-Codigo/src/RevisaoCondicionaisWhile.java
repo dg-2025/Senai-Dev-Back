@@ -10,7 +10,6 @@ public class RevisaoCondicionaisWhile {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Digite a senha: ");
         String senha = scanner.next();
-
         if (senha.equals("1234")) {
             System.out.println("Acesso concedido");
         } else {
