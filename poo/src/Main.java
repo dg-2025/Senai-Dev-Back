@@ -1,20 +1,16 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
-//        Produto prod1 = new Produto();
-//        prod1.nome = "monitor";
-//        prod1.preco = 850.00;
-//        prod1.marca = "dell";
-//
-//        prod1.mostrarInformacoes();
-//
-//        Produto prod2 = new Produto();
-//
-//        prod2.nome = "nootbok";
-//        prod2.preco = 3000.00;
-//        prod2.marca = "dell";
-//
-//        prod2.mostrarInformacoes();
+        Produto prod1 = new Produto("Monitor", 800, "Dell", 80);
+
+        prod1.mostrarInformacoes();
+
+        Produto prod2 = new Produto("Notebook", 2500, "Dell", 40);
+
+        prod2.mostrarInformacoes();
+
 //
 
 //=============================================================================================================
@@ -76,7 +72,61 @@ public class Main {
             - Atributos: `nome` (String), `nota` (double).
             - **Método:** Crie um método `verificarStatus()` (void) que use uma estrutura `if/else`
             para checar o valor da `nota`.
+            */
+
+         Scanner sc = new Scanner(System.in);
+         System.out.println("digite uma nota");
+         double nota = sc.nextDouble();
+         Aluno status = new Aluno(nota);
+         status.verificarStatus(nota);
+
+
+//=============================================================================================================
+            /*
+            4. Gerenciando uma `ContaBancaria`**
+            Crie uma classe `ContaBancaria` com atributos para o nome do titular e o saldo. Implemente métodos
+            para depositar e sacar valores, garantindo que não seja possível sacar um valor maior
+            que o saldo disponível.
+            Dicas:
+            - Nome da classe: `ContaBancaria`.
+            - Atributos: `titular` (String), `saldo` (double).
+            - Método `depositar(double valor)`: deve receber um valor e somá-lo ao saldo.
+            - Método `sacar(double valor)`: deve verificar se `valor` é menor ou igual ao `saldo`.
+              Se for, subtraia o valor do saldo. Se não, exiba uma mensagem "Saldo insuficiente".
              */
 
+
+//=============================================================================================================
+            /*
+            5. Controlando o Estoque de um `Produto`**
+            Usando como base o exemplo do texto, crie a classe `Produto`. Ela deve ter atributos para nome,
+            preço e quantidade em estoque.
+            Implemente métodos para adicionar itens ao estoque e para registrar uma venda.
+            O método de venda deve diminuir o estoque e verificar se há quantidade suficiente para a transação.
+            Dicas:
+            - Nome da classe: `Produto`.
+            - Atributos: `nome` (String), `preco` (double), `estoque` (int).
+            - Método `adicionarEstoque(int quantidade)`: aumenta o valor do atributo `estoque`.
+            - Método `realizarVenda(int quantidade)`: verifica se há `estoque` suficiente.
+              Se sim, diminui o estoque e informa que a venda foi realizada.
+              Se não, informa que o produto está fora de estoque.
+             */
+
+//=============================================================================================================
+            /*
+            6. Criando um `PersonagemJogo`**
+
+            Crie uma classe `PersonagemJogo` que represente um personagem em um jogo de RPG.
+            A classe deve ter atributos para nome, nível e pontos de vida (PV).
+            Crie métodos para que o personagem possa receber dano e subir de nível.
+            Dicas:
+            - Nome da classe: `PersonagemJogo`.
+            - Atributos: `nome` (String), `nivel` (int), `pontosDeVida` (int).
+            - Método `receberDano(int dano)`: subtrai o valor do `dano` dos `pontosDeVida`.
+            - Método `subirDeNivel()`: incrementa o `nivel` do personagem em 1.
+            - Inclua um método `exibirStatus()` para mostrar o estado atual do personagem (nome, nível e PV).
+             */
+
+//=============================================================================================================
     }
 }

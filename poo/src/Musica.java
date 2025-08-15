@@ -4,8 +4,4 @@ public class Musica {
     public String artista;
     public int duracaoEmSegundos;
 
-
-
-
-
 }

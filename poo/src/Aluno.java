@@ -2,16 +2,17 @@ import java.util.Scanner;
 
 public class Aluno {
 
-    public String nome;
     public double nota;
+    public Aluno (double nota){
+        this.nota = nota;
 
-    public void verificarStatus() {
-        System.out.println("digite a nota do aluno");
-        Scanner sc = new Scanner(System.in);
-        double enNota = sc.nextDouble();
-        if (nota > 10 && nota < 0) {
-            System.out.println("digite uma nota valida !");
-            //verificar em casa..................................................................
+    }
+    public void verificarStatus(double nota) {
+
+        if (nota < 7) {
+            System.out.println("reprovado");
+        } else {
+            System.out.println("aprovado");
         }
     }
 }
