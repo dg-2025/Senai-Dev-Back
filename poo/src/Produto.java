@@ -1,19 +1,21 @@
 public class Produto {
 
-    public String nome;
-    public double tamnaho;
+    private String nome;
+    private double tamnaho;
     private double preco;
-    public String cor;
-    public int unidade;
-    public String marca;
+    private String cor;
+    private int unidade;
+    private String marca;
 
 //        GET - PEGAR
     public String getNome()                   {
         return nome;
     }
 
-    public void setNome(String nome){
+//        SET - MUDAR, DEFINIR
 
+    public void setNome(String nome){
+        this.nome = nome;
 
     }
 

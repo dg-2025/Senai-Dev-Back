@@ -5,6 +5,9 @@ public class Main {
 
         Produto prod1 = new Produto("Monitor", 800, "Dell", 80);
 
+        System.out.println(prod1.getNome());
+        prod1.setNome("teclado");
+
         prod1.mostrarInformacoes();
 
         Produto prod2 = new Produto("Notebook", 2500, "Dell", 40);
@@ -94,6 +97,13 @@ public class Main {
             - Método `sacar(double valor)`: deve verificar se `valor` é menor ou igual ao `saldo`.
               Se for, subtraia o valor do saldo. Se não, exiba uma mensagem "Saldo insuficiente".
              */
+            ContaBancaria minhaConta = new ContaBancaria("DANIEL", 1000.0);
+            minhaConta.depositar(500);
+            minhaConta.sacar(2000);
+            minhaConta.sacar(1000);
+
+
+
 
 
 //=============================================================================================================
@@ -110,7 +120,17 @@ public class Main {
             - Método `realizarVenda(int quantidade)`: verifica se há `estoque` suficiente.
               Se sim, diminui o estoque e informa que a venda foi realizada.
               Se não, informa que o produto está fora de estoque.
+
              */
+            String produto = sc.toString();
+            double saldo = sc.nextDouble();
+            int estoque = sc.nextInt();
+
+
+
+
+
+
 
 //=============================================================================================================
             /*
