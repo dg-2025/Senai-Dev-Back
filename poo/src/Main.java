@@ -77,11 +77,11 @@ public class Main {
             para checar o valor da `nota`.
             */
 
-         Scanner sc = new Scanner(System.in);
-         System.out.println("digite uma nota");
-         double nota = sc.nextDouble();
-         Aluno status = new Aluno(nota);
-         status.verificarStatus(nota);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("digite uma nota");
+        double nota = sc.nextDouble();
+        Aluno status = new Aluno(nota);
+        status.verificarStatus(nota);
 
 
 //=============================================================================================================
@@ -97,14 +97,11 @@ public class Main {
             - Método `sacar(double valor)`: deve verificar se `valor` é menor ou igual ao `saldo`.
               Se for, subtraia o valor do saldo. Se não, exiba uma mensagem "Saldo insuficiente".
              */
-            ContaBancaria minhaConta = new ContaBancaria("DANIEL", 1000.0);
-            minhaConta.depositar(500);
-            minhaConta.sacar(2000);
-            minhaConta.sacar(1000);
-
-
-
-
+        ContaBancaria minhaConta = new ContaBancaria("DANIEL", 1000.0);
+        minhaConta.depositar(500);
+        minhaConta.sacar(2000);
+        minhaConta.sacar(1000);
+        sc.nextLine();
 
 //=============================================================================================================
             /*
@@ -122,31 +119,25 @@ public class Main {
               Se não, informa que o produto está fora de estoque.
 
              */
-            String produto = sc.toString();
-            double saldo = sc.nextDouble();
-            int estoque = sc.nextInt();
+
+
+        ProdutoB controle = new ProdutoB("",0,0);
+        System.out.println("ola bem vindo !");
+        System.out.println("digite o nome do produto");
+        controle.setProduto(sc.nextLine());
+        System.out.println("digite o preco");
+        controle.setPreco(sc.nextDouble());
+        System.out.println("digite a quantidade de estoque");
+        controle.setEstoque(sc.nextInt());
+        System.out.println("produto cadastrado:");
+        System.out.println(controle.getProduto());
+        System.out.println(controle.getPreco());
+        System.out.println(controle.getEstoque());
 
 
 
+        Atleta al = new Atleta("daniel","volei");
+        System.out.println(al);
 
-
-
-
-//=============================================================================================================
-            /*
-            6. Criando um `PersonagemJogo`**
-
-            Crie uma classe `PersonagemJogo` que represente um personagem em um jogo de RPG.
-            A classe deve ter atributos para nome, nível e pontos de vida (PV).
-            Crie métodos para que o personagem possa receber dano e subir de nível.
-            Dicas:
-            - Nome da classe: `PersonagemJogo`.
-            - Atributos: `nome` (String), `nivel` (int), `pontosDeVida` (int).
-            - Método `receberDano(int dano)`: subtrai o valor do `dano` dos `pontosDeVida`.
-            - Método `subirDeNivel()`: incrementa o `nivel` do personagem em 1.
-            - Inclua um método `exibirStatus()` para mostrar o estado atual do personagem (nome, nível e PV).
-             */
-
-//=============================================================================================================
     }
 }
