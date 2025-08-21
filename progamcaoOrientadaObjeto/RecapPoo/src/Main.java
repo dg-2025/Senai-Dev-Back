@@ -1,3 +1,5 @@
+import Conta.Bancaria.ContaBancaria;
+import Conta.Bancaria.OperacoesConta;
 import Produto.Exibivel;
 import Produto.Produto;
 import formas.Circulo;
@@ -55,8 +57,28 @@ public class Main {
             que permita transferências entre contas.
 
          */
+        sc.nextLine();
+        System.out.println("Digite o numero da sua conta :");
+        String numeroConta = sc.nextLine();
+        OperacoesConta conta = new ContaBancaria(numeroConta, 0 );
+        System.out.println("Digite o valor a depositar na sua conta :");
+        double valor = sc.nextInt();
 
-
+        System.out.println("oque voce deseja fazer ?");
+        System.out.println("sacar [1]");
+        System.out.println("depositar [2]");
+        System.out.println("consultar saldo [3]");
+        int opcoes = sc.nextInt();
+        if (opcoes == 1 ){
+            conta.sacar(valor);
+        } else if ( opcoes == 2) {
+            conta.depositar(valor);
+        } else if (opcoes == 3) {
+            conta.consultarSaldo();
+        }
+        else {
+            System.out.println("digite um opcao valida !!");
+        }
 
 //====================================================================================================
 
